@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+/*Create Calendar*/
+.btn-start {
+    background-color: rgb(29, 112, 47);
+    color: white;
+    border: 2px solid rgb(128, 0, 0);
+    border-radius: 15px;
+    margin: 15px auto;
+    display: block;
+    width: 150px;
+    height: 30px;
+}
+
+.container {
+    width: 800px;
+    height: 900px;
+    border: 5px solid rgb(128, 0, 0);;
+    margin: 15px auto;
+    background-image: url(taustakuvakisu.jpg);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+        "door6 door16 door3 door9"
+        "door1 door10 door22 door14"
+        "door5 door13 door21 door18"
+        "door12 door7 door4 door19"
+        "door24 door11 door15 door23"
+        "door2 door17 door8 door20";
+}
+
+.image {
+    background-image: none; 
+    background-size: cover;
+    background-position: center;
+    grid-area: door2;
+}
+
+.text {
+    height: 100%;
+    width: 100%;
+    color: black;
+    padding: 10px;
+    border: 2px solid black;
+    transition: opacity 2.5s;
+}
+
+.footer {
+    border-top:  rgb(5, 59, 80);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.frogDiv {
+    text-align: center;
+}
+
+
+/*liukuväritausta*/
+body
+{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgb(239, 33, 85), #71ff76);
+    width:100%;
+    min-height: 100vh;
+}
+h1 {text-align:center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 45px;
+}
+
+/*Määrittää countdownin sijainnin, fontin yms */
+p {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    }
+
+
+/*lumisade*/
+.snowflake {
+    position: fixed;  
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: falling 15s linear infinite;
+}
+
+@keyframes falling {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* vihreä korostus kyseisen päivän reunoille */
+.text.active {
+    border: 3px solid #71ff76; 
+}
+
